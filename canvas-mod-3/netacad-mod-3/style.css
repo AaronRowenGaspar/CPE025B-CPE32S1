@@ -1,0 +1,156 @@
+.box {
+    /* Content dimensions */
+    width: 200px;
+    height: 100px;
+  /* Padding around content */
+  padding: 20px;
+  
+  /* Border around padding */
+  border: 5px solid #333;
+  
+  /* Margin around border */
+  margin: 30px;
+  
+  /* Additional styles for better visualization */
+  background-color: #f4f4f4;
+  }
+
+.rounded-box {
+    background-color: lightblue;
+    background-image: url('https://edube.org/uploads/media/default/0001/04/red-flower.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px; /* Adding rounded corners */
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+  }
+
+  .background-size-box {
+    background-color: #add8e6;
+    background-image: url('https://edube.org/uploads/media/default/0001/04/flowers-banner.png');
+    background-size: cover; /* Ensuring the background covers the entire element */
+    background-clip: border-box; /* Defines how far the background extends */
+    padding: 30px;
+    border: 5px solid black;
+    margin: 20px;
+  }
+
+  .container {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid #333;
+    overflow: scroll; /* Add scrollbars when content overflows */
+  }
+  
+  .content {
+    width: 250px; /* Wider than the container */
+    height: 150px; /* Taller than the container */
+  }
+
+  .center-align {
+    text-align: center;
+    border: 2px solid #ccc; /* Add a border for visualization */
+    padding: 10px; /* Add a padding for visualization */
+  }
+  
+  .p1 {
+    border: 1px dotted; /* Add a border for visualization */
+    padding: 10px; /* Add a padding for vizualization */
+  }
+
+  .page-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    overflow: hidden;
+  }
+  .header {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  }
+  
+  .main-content {
+  background-color: #add8e6;
+  padding: 20px;
+  margin-bottom: 20px;
+  }
+  
+  .footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px;
+  }
+
+  .hidden {
+    display: none;
+}
+
+.menu-item {
+    display: inline;
+    background-color: yellow;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.basic-table {
+    width: 100%;
+    border-collapse: collapse; /* Eliminates the space between borders */
+}
+
+.basic-table th, .basic-table td {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 8px; /* Padding for cell content */
+    text-align: left; /* Aligns text to the left */
+}
+
+.basic-table th {
+    background-color: #f2f2f2; /* Light gray background for headers */
+    color: #333; /* Dark text color for contrast */
+}
+
+.custom-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.custom-form label {
+    margin-top: 10px;
+    display: block;
+    color: #333;
+}
+
+.custom-form input[type="text"],
+.custom-form input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-spacer {
+    height: 20px; /* Adjust the height as needed for appropriate spacing */
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}

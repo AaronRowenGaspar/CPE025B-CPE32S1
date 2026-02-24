@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Launch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Introducing Our New Product</h1>
+            <p>The future of innovation is here.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-intro">
+            <div class="image-container">
+                <img src="https://edube.org/uploads/media/default/0001/04/product.jpg" alt="Product Image" class="product-image">
+            </div>
+            <button class="buy-now">Buy Now!</button>
+        </section>
+
+        <section class="features">
+            <h2>Premium Features</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <span class="icon">💎</span>
+                    <h3>High Quality</h3>
+                    <p>Crafted with the finest materials for durability.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🏷️</span>
+                    <h3>Affordable Price</h3>
+                    <p>Luxury performance without the luxury price tag.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">✨</span>
+                    <h3>Easy to Use</h3>
+                    <p>Ready to go straight out of the box.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Product Launch</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Reveal header immediately
+            document.querySelector('header').classList.add('visible');
+            
+            // Reveal features on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.feature-item').forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+:root {
+    --primary: #6366f1;
+    --accent: #a855f7;
+    --text: #1f2937;
+    --bg: #f3f4f6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* Header Animation */
+header {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    color: white;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 1s ease-out;
+}
+
+header.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Product Image Reveal */
+.product-intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.product-image {
+    max-width: 400px;
+    border-radius: 20px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-image:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Glowing Button */
+.buy-now {
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.buy-now:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px 8px rgba(168, 85, 247, 0.6);
+}
+
+/* Feature Card Scroll Animation */
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+}
+
+.feature-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.feature-item.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background: #111827;
+    color: #9ca3af;
+}

@@ -1,49 +1,81 @@
+@charset "UTF-8";
 /* styles.scss */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #007bff;
+  color: #2b2d42;
+  background-color: #f4f7f6;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
 .header, .footer {
-  background-color: rgb(204, 228.6, 255);
-  padding: 20px;
+  background: linear-gradient(135deg, #4361ee, #3f37c9);
+  color: #ffffff;
+  padding: 40px 20px;
   text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.header h1, .footer p {
-  font-size: 2em;
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: -1px;
 }
 
 main {
-  padding: 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
-main .about h2 {
-  font-size: 1.5em;
+main section {
+  background: #ffffff;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
 }
-main .about p {
-  font-size: 16px;
+main section:hover {
+  transform: translateY(-5px);
 }
-main .features h2 {
-  font-size: 1.5em;
+main section h2 {
+  color: #3f37c9;
+  border-left: 5px solid #4cc9f0;
+  padding-left: 15px;
+  margin-top: 0;
 }
 main .features .feature-list {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style-type: none;
+  padding: 0;
 }
 main .features .feature-list li {
-  border-radius: 5px;
-  padding: 5px;
-  margin-bottom: 5px;
-  background-color: white;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background-color: rgba(76, 201, 240, 0.1);
+  border: 1px solid rgba(76, 201, 240, 0.2);
+  display: flex;
+  align-items: center;
 }
-main .example h2 {
-  font-size: 1.5em;
+main .features .feature-list li::before {
+  content: "✓";
+  color: #4361ee;
+  font-weight: bold;
+  margin-right: 15px;
 }
-main .example .example-text {
+main .example-text {
   border-radius: 10px;
-  padding: 10px;
-  background-color: white;
+  padding: 20px;
+  background: rgb(238.0947368421, 242.7052631579, 241.1684210526);
+  border-left: 4px solid #4361ee;
+  font-style: italic;
+  position: relative;
+}
+
+.footer {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  opacity: 0.9;
 }

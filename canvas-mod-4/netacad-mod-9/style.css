@@ -1,0 +1,97 @@
+:root {
+  --primary: #4361ee;
+  --primary-hover: #3f37c9;
+  --text-main: #2b2d42;
+  --text-muted: #8d99ae;
+  --bg-body: #f8f9fa;
+  --bg-card: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+body {
+  color: var(--text-main);
+  background-color: var(--bg-body);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 40px;
+}
+
+/* Navigation: Clean & Spaced */
+.navigation-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.navigation-menu a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.navigation-menu a:hover {
+  color: var(--primary);
+}
+
+/* Links: No more clunky underlines */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+
+a:hover {
+  border-bottom: 1px solid var(--primary);
+  color: var(--primary-hover);
+}
+
+/* Layout: The "Card" Look */
+.content {
+  display: flex;
+  gap: 30px; /* Space between sidebar and main */
+}
+
+.sidebar, .main-content {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.main-content {
+  flex: 3; /* Give the main content more breathing room */
+}
+
+/* Typography & Utility */
+.large-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.high-contrast-text {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+/* Keep the screen reader utility exactly as is—it's perfect */
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

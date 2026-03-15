@@ -1,0 +1,87 @@
+/* Import a modern, clean font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #2d3436;
+    padding: 40px 20px;
+}
+
+/* Glassmorphism Container */
+main {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    background: linear-gradient(to right, #6c5ce7, #a29bfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #636e72;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    border-left: 4px solid #6c5ce7;
+    padding-left: 15px;
+    margin-top: 30px;
+}
+
+/* Pseudo-element: Elegant first line */
+p::first-line {
+    font-weight: bold;
+    color: #6c5ce7;
+    font-variant: small-caps;
+}
+
+.highlight {
+    background: #6c5ce7;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+a {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    letter-spacing: 1px;
+}

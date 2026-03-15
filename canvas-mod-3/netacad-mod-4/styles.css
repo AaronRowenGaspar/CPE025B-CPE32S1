@@ -1,0 +1,75 @@
+/* Global Reset */
+* {
+    box-sizing: border-box; /* Crucial for float math! */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Header */
+.main-header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.main-header h1 span {
+    color: #007bff;
+}
+
+/* Float Layout Logic */
+.card-column {
+    float: left;
+    width: 31.33%; /* (100% / 3) minus some room for margins */
+    margin: 1%;
+}
+
+.content-box {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid #007bff;
+}
+
+/* Featured Post Logic */
+.featured-post img {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    border-radius: 8px;
+}
+
+/* Clearfix Utility - The most important part of float layouts */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive Design via Media Queries */
+@media (max-width: 768px) {
+    .card-column {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    
+    .featured-post img {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
